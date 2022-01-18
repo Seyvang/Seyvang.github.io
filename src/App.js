@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Explanation from './Component/Explanation';
+import HeadNav from './Component/Navbar';
+import TopPic from './Component/TopPic';
+import {Container} from 'react-bootstrap';
+import Submission from './Component/Submission';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-light">
+      <HeadNav/>
+      <TopPic/>
+      <Container id='start' className='justify-content-center'>
+        <h1 className='text-center'>How much time have you spent on Youtube? The answer might be more than you expected.</h1>
+      </Container>
+      <br></br>
+      <div id='explain'>
+        <Explanation/>
+      </div>
+      <div id='upload'>
+        <Submission/>
+      </div>
+
     </div>
   );
 }
