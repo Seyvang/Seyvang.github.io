@@ -4,6 +4,7 @@ import HeadNav from './Component/Navbar';
 import TopPic from './Component/TopPic';
 import {Container} from 'react-bootstrap';
 import Submission from './Component/Submission';
+import Footer from './Component/Footer';
 
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
       <div id='upload'>
         <Submission/>
       </div>
-
+      <div id='ending'>
+        <Footer/>
+      </div>
     </div>
   );
 }
