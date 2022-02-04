@@ -13,7 +13,11 @@ function Submission() {
     const handleSubmit = () => {
         if(file){
             const jsoned_file = JSON.parse(file)
-            axios.post("https://seyvang-youtube-backend.herokuapp.com/time", jsoned_file)
+            axios.post("https://seyvang-youtube-backend.herokuapp.com/time", {
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                }
+            },jsoned_file)
             .then(res => {
                 setTime(res.data.time)
                 editStatus("Submitted")
