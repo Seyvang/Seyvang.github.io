@@ -12,13 +12,14 @@ function Submission() {
     const [file, setFile] = useState()
     const handleSubmit = () => {
         if(file){
-            const jsoned_file = JSON.parse(file)
+            const jsoned_file = small_history.json()
+            console.log(jsoned_file)
             // https://seyvang-youtube-backend.herokuapp.com/time
             axios.post("/time", {
                 headers: {
                     "Access-Control-Allow-Origin": "*"
                 }
-            },jsoned_file)
+            }, jsoned_file)
             .then(res => {
                 setTime(res.data.time)
                 editStatus("Submitted")
