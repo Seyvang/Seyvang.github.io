@@ -5,7 +5,7 @@ import axios from 'axios';
 function Footer() {
     const [currentText, setCurrentTime] = useState(0);
     useEffect(() => {
-      axios.get('https://seyvang-youtube-backend.herokuapp.com/time')
+      axios.get('/time')
         .then(function(response){
           console.log(response.data)
           
