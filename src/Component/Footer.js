@@ -5,11 +5,7 @@ import axios from 'axios';
 function Footer() {
     const [currentText, setCurrentTime] = useState(0);
     useEffect(() => {
-      axios.get('https://seyvang-youtube-backend.herokuapp.com/time', {
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        }
-    })
+      axios.get('https://seyvang-youtube-backend.herokuapp.com/time')
         .then(function(response){
           console.log(response.data)
           
