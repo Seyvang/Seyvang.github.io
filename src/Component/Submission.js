@@ -13,16 +13,16 @@ function Submission() {
     const handleSubmit = () => {
         if(file){
             const jsoned_file = JSON.parse(file)
-            axios.post("https://seyvang-youtube-backend.herokuapp.com/time", jsoned_file)
+            axios.post("https://seyvang-youtube-backend.herokuapp.com/time", jsoned_file,{
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                }
+            })
             .then(res => {
                 setTime(res.data.time)
                 editStatus("Submitted")
             })
-            .catch(error => {
-                console.log(jsoned_file)
-                editStatus("NoServer")
-                console.log(error)
-            })
+            .catch(error => editStatus("NoServer"))
         }
         else{
             alert("Submit a file first!!!")
