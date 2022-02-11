@@ -1,5 +1,5 @@
 {
-  "homepage": "https://seyvang.github.io/",
+  "homepage": "https://seyvang.github.io/youtube_history",
   "name": "youtube_history",
   "version": "0.1.0",
   "private": true,
@@ -42,5 +42,4 @@
     ]
   },
   "proxy": "https://seyvang-youtube-backend.herokuapp.com/"
-
 }
